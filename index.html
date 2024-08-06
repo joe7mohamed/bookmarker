@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-light text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3 mb-0 text-dark">Bookmarker</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+
+        <form id="bookmarkForm">
+            <div class="mb-3">
+                <label for="bookmarkTitle" class="form-label">Title</label>
+                <i class="fa-solid fa-book-bookmark"></i>
+                <input type="text" placeholder="Bookmark Title" class="form-control" id="bookmarkTitle" required>
+                <div id="titleError" class="invalid-feedback d-none">Title must be at least 3 characters long.</div>
+            </div>
+            <div class="mb-3">
+                <label for="bookmarkURL" class="form-label">URL</label>
+                <i class="fa-regular fa-bookmark"></i>
+                <input type="url" placeholder="Website URL Address" class="form-control" id="bookmarkURL" required>
+                <div id="urlError" class="invalid-feedback d-none">Please enter a valid URL.</div>
+            </div>
+            <button type="submit" class="btn btn-dark mb-4">Save Bookmark <i
+                    class="fa-regular fa-bookmark"></i></button>
+        </form>
+
+        <div class="row g-4">
+            <!-- Bookmark Item -->
+            <div class="col-sm-6">
+                <div id="rowData"></div>
+            </div>
+            <!-- Repeat for more bookmarks -->
+        </div>
+
+        <!-- Bookmark Table -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="bookmarkTableBody">
+                <!-- Bookmarked items will be appended here -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
